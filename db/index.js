@@ -13,6 +13,10 @@ module.exports = {
   ...require('./cart'),
   ...require('./orders'),
   ...require('./product'),
+<<<<<<< HEAD
   ...require('./checkout'),
+=======
+  ...require('./checkout')
+>>>>>>> 48663e0d7374ca548279834caf47c5119daed191
   // db methods
 }
