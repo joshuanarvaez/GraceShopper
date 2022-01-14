@@ -1,6 +1,6 @@
 // Connect to DB
 const { Client } = require('pg');
-const DB_NAME = 'change-this-name'
+const DB_NAME = 'GRACE_SHOPPER'
 const DB_URL = process.env.DATABASE_URL || `postgres://${ DB_NAME }`;
 const client = new Client(DB_URL);
 
@@ -9,5 +9,10 @@ const client = new Client(DB_URL);
 // export
 module.exports = {
   client,
+  ...require('./user')
+  ...require('./cart')
+  ...require('./orders')
+  ...require('./product')
+  ...require('./checkout')
   // db methods
 }
