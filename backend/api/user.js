@@ -3,7 +3,7 @@ const userRouter = express.Router()
 const jwt = require('jsonwebtoken')
 const { JWT_SECRET } = process.env
 
-const { createUser, getUser, getUserByUsername } = require('../db/user')
+const { createUser, getUser, getUserByUsername } = require('..db/user')
 
 
 

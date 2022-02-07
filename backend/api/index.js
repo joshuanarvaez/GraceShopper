@@ -1,3 +1,4 @@
+// create an api router
 const express = require('express')
 const app = express.Router()
 
@@ -10,6 +11,11 @@ app.get("/health", (req, res, next) => {
   });
 });
 
+const userMiddleware = require('./middleware/userMiddleware')
+app.use(userMiddleware);
+
+
+// attach other routers from files in this api directory (users, activities...)
 const usersRouter = require('./user');
 app.use('/user', usersRouter);
 

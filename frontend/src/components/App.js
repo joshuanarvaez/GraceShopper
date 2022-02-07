@@ -34,24 +34,6 @@ const App = () => {
  const [status, setStatus] = useState({}) // used for status bars
  const [open, setOpen] = useState(false) // used to show status or not
 
-//   useEffect(() => {
-//     getSomething()
-//       .then(response => {
-//         setMessage(response.message);
-//       })
-//       .catch(error => {
-//         setMessage(error.message);
-//       });
-//   });
-
-//   return (
-//     <div className="App">
-//       <h1>Hello, World!</h1>
-//       <h2>{ message }</h2>
-//     </div>
-//   );
-// }
-
 const navigate = useNavigate()
   const handleLogout = () => {
     setUser({})
@@ -76,16 +58,7 @@ const navigate = useNavigate()
   return <div>
     <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
     <NavBar user={user} handleLogout={handleLogout}></NavBar>  
-    {/* // doesnt need to be in a route because it will always be at the top */}
-    {/* // another one that doesnt need a route would be Status -- hint this is a component */}
-
     <Routes>
-      {/* 
-      Old way
-      <Route exact path="/">
-        <Home user={user}></Home>
-      </Route> 
-      */}
 
       {/* ALL ROUTES HERE */}
 
